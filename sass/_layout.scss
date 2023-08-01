@@ -1,9 +1,13 @@
+// .section-login{
+//     background-image: linear-gradient(to right bottom, rgba(40, 40, 40, 0.801), #101d2c);
+// }
+
 .container {
     max-width: 120rem;
     margin: 8rem auto;
-    background-color: var(--color-grey-light-1);
-    box-shadow: var(--shadow-dark);
-
+    background-color: #faf9f9;
+    // background-image: linear-gradient(to right bottom, rgba(40, 40, 40, 0.801), #101d2c);
+    box-shadow: $color-black;
     min-height: 50rem;
 
     @media only screen and (max-width: $bp-largest) {

@@ -1,0 +1,143 @@
+.btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
+    &:hover {
+        color: var(--color-grey-dark-1);
+
+        span {
+            margin-left: 8px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, .25);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
+
+///////////////////
+// PARAGRAPH
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+
+.btn {
+    // font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    // background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: $color-text;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 5rem;
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color-primary-dark, 1);
+
+
+    &>* {
+        display: inline-block;
+        height: 500%;
+        // width: 100%;
+        transition: all .2s;
+    }
+
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+        &:hover &__visible {
+            transform: translateY(100%);
+        }
+
+        &:hover &__invisible {
+            top: 0;
+        }
+
+        &:focus {
+            outline: none;
+            animation: pulsate 1s infinite;
+        }
+
+        &--login {
+
+            background-color: rgba($color-primary-dark, 0.6);
+            color: $color-white;
+            // width: 50%;
+
+            &::after {
+                background-color: rgba($color-primary-dark, 0.9);
+            }
+
+        }
+
+        &__icon {
+
+            &,
+            &:link,
+            &:visited {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                align-content: center;
+                justify-content: center;
+                // width: 25rem;
+            }
+        }
+    }
+
+
+}
