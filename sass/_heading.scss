@@ -1,3 +1,8 @@
+.span {
+    // animation-name: moveInLeft;
+    // animation-duration: 5s;
+}
+
 .heading {
     text-align: center;
     background-color: $color-primary ;
@@ -5,11 +10,18 @@
     color: $color-text;
     font-size: 1.4rem;
     font-style: italic;
-    font-weight: 100;
+    // font-weight: 100;
     padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
 
+    animation: moveInColor 2s ease-out;
+    animation-delay: .2s;
+    // animation-iteration-count: 2;
+
+    //      //animation-name: moveInLeft;
+    //   //  animation-duration: 1s;
+    //     //animation-timing-function: ease-out;
     &-login {
         text-align: center;
         font-style: italic;
@@ -32,5 +44,164 @@
             transform: skewY(2deg) skewX(2deg) scale(1.1);
             text-shadow: .5rem 1rem 2rem rgba(rgb(255, 255, 255), .2);
         }
+    }
+}
+
+.header {
+    // font-size: 1.4rem;
+    height: 7rem;
+    background-color: $color-black;
+    // border-bottom: var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // animation: moveInRight 2s ease-out;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;
+    }
+}
+
+.search {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+        animation: moveInBottom 2s ease-out;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: $color-secondary-dark;
+        border: none;
+        color: inherit;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: $color-search;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-search;
+        }
+    }
+
+    &__input:focus+&__button {
+        background-color: $color-secondary-dark;
+    }
+
+    &__button {
+        border: none;
+        background-color: $color-secondary-dark;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-search;
+    }
+}
+
+.logo {
+    height: 6.96rem;
+    width: 8rem;
+    // margin-left: 2rem;
+    cursor: progress;
+
+    animation: moveInLefttoRight 2s ease-out;
+    animation-delay: .2s;
+}
+
+.user-nav {
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+
+    &>* {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &>*:hover {
+        background-color: $color-secondary-dark;
+    }
+
+    &__icon-box {
+        position: relative;
+        // display: flex;
+        // align-items: center;
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 4rem;
+        fill: $color-text;
+    }
+
+    &__notification {
+        font-size: 1.1rem;
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 50%;
+        background-color: rgba(255, 0, 0, 0.753);
+        color: $color-text;
+        position: absolute;
+        top: .9rem;
+        right: 1rem;
+        padding-left: .15rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__user-photo {
+        height: 4rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+        animation: moveInLeft 2s ease-out;
+        animation-delay: .2s;
+
+    }
+
+    &__user-namee {
+        justify-content: center;
+        align-items: center;
+        padding-left: .5rem;
+        font-size: 1.3rem;
+        color: white;
+        animation: moveInLeft 2s ease-out;
+        animation-delay: .2s;
     }
 }
