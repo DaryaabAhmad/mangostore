@@ -1,6 +1,6 @@
-.span {
-    // animation-name: moveInLeft;
-    // animation-duration: 5s;
+.bold-to-normal {
+    animation: moveInHeading 2s ease-out;
+    animation-delay: .2s;
 }
 
 .heading {
@@ -15,13 +15,9 @@
     align-items: center;
     justify-content: space-between;
 
-    animation: moveInColor 2s ease-out;
-    animation-delay: .2s;
-    // animation-iteration-count: 2;
+    // animation: moveInColor 2s ease-out;
+    // animation-delay: .2s;
 
-    //      //animation-name: moveInLeft;
-    //   //  animation-duration: 1s;
-    //     //animation-timing-function: ease-out;
     &-login {
         text-align: center;
         font-style: italic;

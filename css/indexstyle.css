@@ -281,6 +281,10 @@ body {
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
 
+.bold-to-normal {
+  animation: moveInHeading 2s ease-out;
+  animation-delay: .2s; }
+
 .heading {
   text-align: center;
   background-color: #282828;
@@ -290,9 +294,7 @@ body {
   font-style: italic;
   padding: 1rem 0;
   align-items: center;
-  justify-content: space-between;
-  animation: moveInColor 2s ease-out;
-  animation-delay: .2s; }
+  justify-content: space-between; }
   .heading-login {
     text-align: center;
     font-style: italic;
@@ -432,7 +434,8 @@ body {
   background-color: #c1b4b4;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 3.5rem; }
+  grid-row-gap: 3.5rem;
+  animation: moveInForm 2s ease-out; }
   .home__img {
     width: 100%;
     grid-row: 1 / 2;
@@ -803,6 +806,15 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moveInHeading {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+    font-size: 3rem; }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 @keyframes moveInLefttoRight {
   0% {
     opacity: 0;
@@ -818,7 +830,7 @@ body {
 @keyframes moveInForm {
   0% {
     opacity: 0;
-    transform: translateX(-0.001rem);
+    transform: translateY(-3rem);
     /*rotate(-50deg)*/ }
   /* 60%{
         transform: rotate(180deg) ;

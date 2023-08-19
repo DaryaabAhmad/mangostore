@@ -68,12 +68,28 @@
         background-color: $color-primary-dark;
         opacity: 0;
         transform: translateX(-5rem);
+        // font-size: 5rem;
 
 
     }
 
     100% {
         background-color: $color-primary;
+        opacity: 1;
+        transform: translate(0);
+        // transform: translate(0);
+
+    }
+}
+
+@keyframes moveInHeading {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+        font-size: 3rem;
+    }
+
+    100% {
         opacity: 1;
         transform: translate(0);
         // transform: translate(0);
@@ -102,7 +118,7 @@
 @keyframes moveInForm {
     0% {
         opacity: 0;
-        transform: translateX(-.001rem);
+        transform: translateY(-3rem);
         // transform: skewY(2deg) skewX(2deg) scale(1.1);
 
         /*rotate(-50deg)*/
