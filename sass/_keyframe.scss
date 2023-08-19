@@ -106,9 +106,12 @@
         font-weight: bold;
 
     }
-30%{
-    color: $color-primary-dark;
-}
+
+    30% {
+        color: $color-primary-dark;
+        font-weight: bold;
+    }
+
     100% {
         opacity: 1;
         transform: translate(0);
