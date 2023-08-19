@@ -97,6 +97,26 @@
     }
 }
 
+@keyframes moveInHeadingg {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+        font-size: 3rem;
+        color: $color-primary-dark;
+        font-weight: bold;
+
+    }
+30%{
+    color: $color-primary-dark;
+}
+    100% {
+        opacity: 1;
+        transform: translate(0);
+        // transform: translate(0);
+
+    }
+}
+
 @keyframes moveInLefttoRight {
     0% {
         opacity: 0;

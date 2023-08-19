@@ -282,7 +282,7 @@ body {
     margin-bottom: 2.5rem; }
 
 .bold-to-normal {
-  animation: moveInHeading 2s ease-out;
+  animation: moveInHeadingg 2s ease-out;
   animation-delay: .2s; }
 
 .heading {
@@ -811,6 +811,19 @@ body {
     opacity: 0;
     transform: translateX(-5rem);
     font-size: 3rem; }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInHeadingg {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+    font-size: 3rem;
+    color: #240090;
+    font-weight: bold; }
+  30% {
+    color: #240090; }
   100% {
     opacity: 1;
     transform: translate(0); } }
