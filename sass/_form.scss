@@ -7,7 +7,10 @@
     margin-top: 5rem;
 
     animation: moveInForm 2s ease;
-    
+
+    // transform: translate(-50%, -50%) scale(1.1);
+    // transition: all .5s .2s;
+
 
     &__group:not(:last-child) {
         margin-bottom: 0;
@@ -78,6 +81,8 @@
 
 
     }
+
+
 
     // radio
 
@@ -213,4 +218,32 @@
 
 
     }
+}
+
+.l {
+    // background-color: red ;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    // color: white;
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $color-white;
+            background-color: $color-grey-dark-1;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: #916ff1;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+
 }
