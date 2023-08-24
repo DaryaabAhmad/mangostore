@@ -21,6 +21,10 @@
 
 .content {
     display: flex;
+    background-image: url(../img/hotel-2.jpg);
+    // height: 120vh;
+    width: 100%;
+    background-repeat: no-repeat;
 
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
