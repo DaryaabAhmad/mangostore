@@ -1,14 +1,12 @@
-// .section-login{
-//     background-image: linear-gradient(to right bottom, rgba(40, 40, 40, 0.801), #101d2c);
-// }
-
 .container {
     max-width: 120rem;
     margin: 8rem auto;
     background-color: #faf9f9;
-    // background-image: linear-gradient(to right bottom, rgba(40, 40, 40, 0.801), #101d2c);
+    // background-image: linear-gradient(to right bottom, rgba(40, 40, 40, 0.801), $color-gradiant);
     box-shadow: $color-black;
     min-height: 50rem;
+    // background-image: url(../img/hotel-2.jpg);
+
 
     @media only screen and (max-width: $bp-largest) {
         margin: 0;
@@ -24,10 +22,14 @@
     background-image: url(../img/hotel-2.jpg);
     // height: 120vh;
     width: 100%;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
 
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
+    }
+    &__page{
+    background-image: linear-gradient(to right bottom, rgba(40, 40, 40, 0.801), $color-gradiant);
+
     }
 }
 

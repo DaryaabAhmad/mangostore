@@ -51,11 +51,12 @@ body {
 .content {
   display: flex;
   background-image: url(../img/hotel-2.jpg);
-  width: 100%;
-  background-repeat: no-repeat; }
+  width: 100%; }
   @media only screen and (max-width: 56.25em) {
     .content {
       flex-direction: column; } }
+  .content__page {
+    background-image: linear-gradient(to right bottom, rgba(40, 40, 40, 0.801), #101d2c); }
 
 .hotel-view {
   background-color: #fff;
@@ -106,7 +107,8 @@ body {
   font-size: 1.8rem;
   letter-spacing: .1rem; }
   .page__1 {
-    background-color: #282828; }
+    background-color: #282828;
+    box-shadow: 0rem 2rem 2rem 0rem rgba(0, 0, 0, 0.5); }
 
 .legal {
   font-size: 1.2rem;
@@ -692,7 +694,7 @@ body {
     display: inline-block;
     transition: all .2s; }
   .l__link:hover, .l__link:active {
-    color: #916ff1;
+    color: #6f7cf1;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(5deg) scale(1.3); }
 
